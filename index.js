@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 dotenv.config();
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
@@ -16,6 +17,9 @@ const user = require('./routes/user');
 app.get('/', (req, res) => {
     res.send('Express + TypeScript Server');
 });
+
+app.use(cors());
+
 
 app.use("/auth",auth)
 app.use("/todo",todo)
