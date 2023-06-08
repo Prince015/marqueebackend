@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.send('Express + TypeScript Server');
 });
 
-app.use("/app",auth)
+app.use("/auth",auth)
 app.use("/todo",todo)
 app.use("/user",user)
 
